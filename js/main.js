@@ -36,13 +36,3 @@ if ('IntersectionObserver' in window) {
 } else {
   revealTargets.forEach((target) => target.classList.add('is-visible'));
 }
-
-const cvLink = document.querySelector('#cv');
-
-if (cvLink) {
-  cvLink.addEventListener('click', (event) => {
-    event.preventDefault();
-    cvLink.textContent = 'CV coming soon';
-    cvLink.setAttribute('aria-live', 'polite');
-  });
-}
