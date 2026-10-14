@@ -327,3 +327,72 @@ footer{
   .actions a,.work a{width:100%;justify-content:center}
   .pack,.work li{padding:20px}
 }
+
+.shot{margin:18px 0 8px}
+.shot img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.shot.portrait img{max-width:420px}
+.shot figcaption{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:.92rem;
+}
+
+.side nav .subnav{
+  display:none;
+  gap:4px;
+  margin:-2px 0 2px 14px;
+  padding-left:10px;
+  border-left:2px solid var(--line);
+}
+.side nav .subnav.is-open{display:grid}
+.side nav .subnav a{
+  padding:6px 12px;
+  font-size:.92rem;
+  color:var(--muted);
+}
+.side nav .subnav a:hover{color:var(--accent-strong)}
+
+@media (max-width:900px){
+  .side nav .subnav.is-open{
+    display:flex;
+    flex-wrap:wrap;
+    margin:0;
+    padding-left:0;
+    border-left:0;
+  }
+}
+
+.contact-grid .label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.contact-grid .icon{
+  width:22px;
+  height:22px;
+  flex:none;
+  fill:currentColor;
+}
+.contact-grid .icon-email{color:var(--accent)}
+.contact-grid .icon-linkedin{color:#0a66c2}
+.contact-grid .icon-whatsapp{color:#25d366}
+.contact-grid .icon-x{color:var(--ink)}
+.contact-grid p{
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.contact-grid p:hover{
+  transform:translateY(-3px);
+  border-color:rgba(17,100,102,.35);
+  box-shadow:var(--shadow);
+}
+@media (prefers-reduced-motion:reduce){
+  .contact-grid p{transition:none}
+  .contact-grid p:hover{transform:none}
+}
